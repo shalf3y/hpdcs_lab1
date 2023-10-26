@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "a7cc1279-dada-4f00-8339-f8ace512eb31",
+		"name": "lab_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30778132"
+	},
+	"item": [
+		{
+			"name": "http://localhost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/lite-server/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/lite-server/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"lite-server",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/json-server/posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/json-server/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"json-server",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
