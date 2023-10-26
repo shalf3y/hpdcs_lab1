@@ -1,5 +1,7 @@
 # Високопродуктивні розподілені обчислювальні системи — лабораторна робота 1
 
+**Савченко Михайло, Бондаренко Олена (КІ-31мп)**
+
 **Task 1: Hello-world**
 1. Installed docker and docker-compose
 2. Opened terminal, executed `docker pull hello-world` to install hello-world package
@@ -29,9 +31,8 @@ Tested successfully:
 1. Pulled nginx by runnning `docker pull nginx`
 2. Created docker-compose.yaml to set up three services: Nginx, lite-server, and JSON-server. Nginx listens on port 80 and forwards requests to the lite-server and JSON-server containers.
 3. Created nginx directory inside project directory and created its configs: nginx.conf and default.conf. Our Nginx configuration listens on port 80 and forwards requests to either the static content (/) or to the lite-server (/lite-server/) and JSON-server (/json-server/) services.
-4. Deployed containers and tested by running the following comand to scale it by 3:
+4. Deployed containers running the following comand to scale it by 3:
 ```docker-compose up --scale lite-server=3 --scale json-server=3```
-
 
 **Task 5: Postman**
 1. Installed Postman to perform further testing of containers deployed in step 4.
