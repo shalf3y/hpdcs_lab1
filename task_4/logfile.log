@@ -1,0 +1,222 @@
+❯ docker-compose up --scale lite-server=3 --scale json-server=3
+
+[+] Building 0.0s (0/0)                                                                                      docker:desktop-linux
+[+] Running 8/7
+ ✔ Network task_4_default          Created                                                                                   0.1s
+ ✔ Container task_4-json-server-3  Created                                                                                   0.1s
+ ✔ Container task_4-lite-server-1  Created                                                                                   0.1s
+ ✔ Container task_4-json-server-1  Created                                                                                   0.1s
+ ✔ Container task_4-json-server-2  Created                                                                                   0.1s
+ ✔ Container task_4-lite-server-2  Created                                                                                   0.1s
+ ✔ Container task_4-lite-server-3  Created                                                                                   0.1s
+ ✔ Container task_4-nginx-1        Created                                                                                   0.1s
+Attaching to task_4-json-server-1, task_4-json-server-2, task_4-json-server-3, task_4-lite-server-1, task_4-lite-server-2, task_4-lite-server-3, task_4-nginx-1
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/host_mnt/Users/m/Lab/lab_1/task_4/nginx/default.conf" to rootfs at "/etc/nginx/conf.d/default.conf": mount /host_mnt/Users/m/Lab/lab_1/task_4/nginx/default.conf:/etc/nginx/conf.d/default.conf (via /proc/self/fd/9), flags: 0x5001: not a directory: unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type
+❯ touch default.conf
+❯ docker-compose up --scale lite-server=3 --scale json-server=3
+
+[+] Building 0.0s (0/0)                                                                                      docker:desktop-linux
+[+] Running 6/0
+ ✔ Container task_4-lite-server-2  Running                                                                                   0.0s
+ ✔ Container task_4-lite-server-3  Running                                                                                   0.0s
+ ✔ Container task_4-lite-server-1  Running                                                                                   0.0s
+ ✔ Container task_4-json-server-1  Running                                                                                   0.0s
+ ✔ Container task_4-json-server-3  Running                                                                                   0.0s
+ ✔ Container task_4-json-server-2  Running                                                                                   0.0s
+Attaching to task_4-json-server-1, task_4-json-server-2, task_4-json-server-3, task_4-lite-server-1, task_4-lite-server-2, task_4-lite-server-3, task_4-nginx-1
+task_4-nginx-1        | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+task_4-nginx-1        | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+task_4-nginx-1        | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+task_4-nginx-1        | 10-listen-on-ipv6-by-default.sh: info: can not modify /etc/nginx/conf.d/default.conf (read-only file system?)
+task_4-nginx-1        | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+task_4-nginx-1        | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+task_4-nginx-1        | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+task_4-nginx-1        | /docker-entrypoint.sh: Configuration complete; ready for start up
+
+^CGracefully stopping... (press Ctrl+C again to force)
+Aborting on container exit...
+[+] Stopping 7/7
+ ✔ Container task_4-nginx-1        Stopped                                                                                   0.1s
+ ✔ Container task_4-json-server-2  Stopped                                                                                  10.4s
+ ✔ Container task_4-json-server-1  Stopped                                                                                  10.2s
+ ✔ Container task_4-json-server-3  Stopped                                                                                  10.4s
+ ✔ Container task_4-lite-server-1  Stopped                                                                                  10.3s
+ ✔ Container task_4-lite-server-2  Stopped                                                                                  10.5s
+ ✔ Container task_4-lite-server-3  Stopped                                                                                  10.5s
+canceled
+ ~/Lab/lab_1/task_4                                                                                    INT х │ 1m 49s │ 21:41:28
+❯ docker-compose up --scale lite-server=3 --scale json-server=3
+
+[+] Building 0.0s (0/0)                                                                                      docker:desktop-linux
+[+] Running 7/0
+ ✔ Container task_4-json-server-1  Created                                                                                   0.0s
+ ✔ Container task_4-json-server-3  Created                                                                                   0.0s
+ ✔ Container task_4-json-server-2  Created                                                                                   0.0s
+ ✔ Container task_4-lite-server-2  Created                                                                                   0.0s
+ ✔ Container task_4-lite-server-3  Created                                                                                   0.0s
+ ✔ Container task_4-lite-server-1  Created                                                                                   0.0s
+ ✔ Container task_4-nginx-1        Created                                                                                   0.0s
+Attaching to task_4-json-server-1, task_4-json-server-2, task_4-json-server-3, task_4-lite-server-1, task_4-lite-server-2, task_4-lite-server-3, task_4-nginx-1
+task_4-nginx-1        | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+task_4-nginx-1        | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+task_4-nginx-1        | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+task_4-nginx-1        | 10-listen-on-ipv6-by-default.sh: info: can not modify /etc/nginx/conf.d/default.conf (read-only file system?)
+task_4-nginx-1        | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+task_4-nginx-1        | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+task_4-nginx-1        | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+task_4-nginx-1        | /docker-entrypoint.sh: Configuration complete; ready for start up
+task_4-json-server-1  |
+task_4-json-server-1  | changed 116 packages in 4s
+task_4-json-server-1  |
+task_4-json-server-1  | 15 packages are looking for funding
+task_4-json-server-1  |   run `npm fund` for details
+task_4-json-server-3  |
+task_4-json-server-3  | changed 116 packages in 4s
+task_4-json-server-3  |
+task_4-json-server-3  | 15 packages are looking for funding
+task_4-json-server-3  |   run `npm fund` for details
+task_4-json-server-1  |
+task_4-json-server-1  |   \{^_^}/ hi!
+task_4-json-server-1  |
+task_4-json-server-1  |   Loading data/db.json
+task_4-json-server-1  |   Done
+task_4-json-server-1  |
+task_4-json-server-1  |   Resources
+task_4-json-server-1  |   http://0.0.0.0:3000/posts
+task_4-json-server-1  |   http://0.0.0.0:3000/comments
+task_4-json-server-1  |   http://0.0.0.0:3000/profile
+task_4-json-server-1  |
+task_4-json-server-1  |   Home
+task_4-json-server-1  |   http://0.0.0.0:3000
+task_4-json-server-1  |
+task_4-json-server-1  |   Type s + enter at any time to create a snapshot of the database
+task_4-json-server-1  |   Watching...
+task_4-json-server-1  |
+task_4-json-server-2  |
+task_4-json-server-2  | changed 116 packages in 4s
+task_4-json-server-2  |
+task_4-json-server-2  | 15 packages are looking for funding
+task_4-json-server-2  |   run `npm fund` for details
+task_4-json-server-3  |
+task_4-json-server-3  |   \{^_^}/ hi!
+task_4-json-server-3  |
+task_4-json-server-3  |   Loading data/db.json
+task_4-json-server-3  |   Done
+task_4-json-server-3  |
+task_4-json-server-3  |   Resources
+task_4-json-server-3  |   http://0.0.0.0:3000/posts
+task_4-json-server-3  |   http://0.0.0.0:3000/comments
+task_4-json-server-3  |   http://0.0.0.0:3000/profile
+task_4-json-server-3  |
+task_4-json-server-3  |   Home
+task_4-json-server-3  |   http://0.0.0.0:3000
+task_4-json-server-3  |
+task_4-json-server-3  |   Type s + enter at any time to create a snapshot of the database
+task_4-json-server-3  |   Watching...
+task_4-json-server-3  |
+task_4-json-server-2  |
+task_4-json-server-2  |   \{^_^}/ hi!
+task_4-json-server-2  |
+task_4-json-server-2  |   Loading data/db.json
+task_4-json-server-2  |   Done
+task_4-json-server-2  |
+task_4-json-server-2  |   Resources
+task_4-json-server-2  |   http://0.0.0.0:3000/posts
+task_4-json-server-2  |   http://0.0.0.0:3000/comments
+task_4-json-server-2  |   http://0.0.0.0:3000/profile
+task_4-json-server-2  |
+task_4-json-server-2  |   Home
+task_4-json-server-2  |   http://0.0.0.0:3000
+task_4-json-server-2  |
+task_4-json-server-2  |   Type s + enter at any time to create a snapshot of the database
+task_4-json-server-2  |   Watching...
+task_4-json-server-2  |
+task_4-lite-server-2  |
+task_4-lite-server-2  | changed 157 packages in 8s
+task_4-lite-server-2  |
+task_4-lite-server-2  | 8 packages are looking for funding
+task_4-lite-server-2  |   run `npm fund` for details
+task_4-lite-server-2  | Did not detect a `bs-config.json` or `bs-config.js` override file. Using lite-server defaults...
+task_4-lite-server-2  | ** browser-sync config **
+task_4-lite-server-2  | {
+task_4-lite-server-2  |   injectChanges: false,
+task_4-lite-server-2  |   files: [ './**/*.{html,htm,css,js}' ],
+task_4-lite-server-2  |   watchOptions: { ignored: 'node_modules' },
+task_4-lite-server-2  |   server: {
+task_4-lite-server-2  |     baseDir: './',
+task_4-lite-server-2  |     middleware: [ [Function (anonymous)], [Function (anonymous)] ]
+task_4-lite-server-2  |   }
+task_4-lite-server-2  | }
+task_4-lite-server-1  |
+task_4-lite-server-1  | changed 157 packages in 7s
+task_4-lite-server-1  |
+task_4-lite-server-1  | 8 packages are looking for funding
+task_4-lite-server-1  |   run `npm fund` for details
+task_4-lite-server-2  | [Browsersync] Access URLs:
+task_4-lite-server-2  |  -----------------------------------
+task_4-lite-server-2  |        Local: http://localhost:3000
+task_4-lite-server-2  |     External: http://172.21.0.3:3000
+task_4-lite-server-2  |  -----------------------------------
+task_4-lite-server-2  |           UI: http://localhost:3001
+task_4-lite-server-2  |  UI External: http://localhost:3001
+task_4-lite-server-2  |  -----------------------------------
+task_4-lite-server-2  | [Browsersync] Serving files from: ./
+task_4-lite-server-2  | [Browsersync] Watching files...
+task_4-lite-server-2  | [Browsersync] Couldn't open browser (if you are using BrowserSync in a headless environment, you might want to set the open option to false)
+task_4-lite-server-1  | Did not detect a `bs-config.json` or `bs-config.js` override file. Using lite-server defaults...
+task_4-lite-server-1  | ** browser-sync config **
+task_4-lite-server-1  | {
+task_4-lite-server-1  |   injectChanges: false,
+task_4-lite-server-1  |   files: [ './**/*.{html,htm,css,js}' ],
+task_4-lite-server-1  |   watchOptions: { ignored: 'node_modules' },
+task_4-lite-server-1  |   server: {
+task_4-lite-server-1  |     baseDir: './',
+task_4-lite-server-1  |     middleware: [ [Function (anonymous)], [Function (anonymous)] ]
+task_4-lite-server-1  |   }
+task_4-lite-server-1  | }
+task_4-lite-server-3  |
+task_4-lite-server-3  | changed 157 packages in 8s
+task_4-lite-server-3  |
+task_4-lite-server-3  | 8 packages are looking for funding
+task_4-lite-server-3  |   run `npm fund` for details
+task_4-lite-server-1  | [Browsersync] Access URLs:
+task_4-lite-server-1  |  -----------------------------------
+task_4-lite-server-1  |        Local: http://localhost:3000
+task_4-lite-server-1  |     External: http://172.21.0.6:3000
+task_4-lite-server-1  |  -----------------------------------
+task_4-lite-server-1  |           UI: http://localhost:3001
+task_4-lite-server-1  |  UI External: http://localhost:3001
+task_4-lite-server-1  |  -----------------------------------
+task_4-lite-server-1  | [Browsersync] Serving files from: ./
+task_4-lite-server-1  | [Browsersync] Watching files...
+task_4-lite-server-1  | [Browsersync] Couldn't open browser (if you are using BrowserSync in a headless environment, you might want to set the open option to false)
+task_4-lite-server-3  | Did not detect a `bs-config.json` or `bs-config.js` override file. Using lite-server defaults...
+task_4-lite-server-3  | ** browser-sync config **
+task_4-lite-server-3  | {
+task_4-lite-server-3  |   injectChanges: false,
+task_4-lite-server-3  |   files: [ './**/*.{html,htm,css,js}' ],
+task_4-lite-server-3  |   watchOptions: { ignored: 'node_modules' },
+task_4-lite-server-3  |   server: {
+task_4-lite-server-3  |     baseDir: './',
+task_4-lite-server-3  |     middleware: [ [Function (anonymous)], [Function (anonymous)] ]
+task_4-lite-server-3  |   }
+task_4-lite-server-3  | }
+task_4-lite-server-3  | [Browsersync] Access URLs:
+task_4-lite-server-3  |  -----------------------------------
+task_4-lite-server-3  |        Local: http://localhost:3000
+task_4-lite-server-3  |     External: http://172.21.0.5:3000
+task_4-lite-server-3  |  -----------------------------------
+task_4-lite-server-3  |           UI: http://localhost:3001
+task_4-lite-server-3  |  UI External: http://localhost:3001
+task_4-lite-server-3  |  -----------------------------------
+task_4-lite-server-3  | [Browsersync] Serving files from: ./
+task_4-lite-server-3  | [Browsersync] Watching files...
+task_4-lite-server-3  | [Browsersync] Couldn't open browser (if you are using BrowserSync in a headless environment, you might want to set the open option to false)
+task_4-nginx-1        | 2023/10/26 18:43:08 [error] 21#21: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: localhost, request: "GET /lite-server/ HTTP/1.1", upstream: "http://172.21.0.3:8080/", host: "localhost"
+task_4-nginx-1        | 2023/10/26 18:43:08 [error] 21#21: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: localhost, request: "GET /lite-server/ HTTP/1.1", upstream: "http://172.21.0.6:8080/", host: "localhost"
+task_4-nginx-1        | 2023/10/26 18:43:08 [error] 21#21: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: localhost, request: "GET /lite-server/ HTTP/1.1", upstream: "http://172.21.0.5:8080/", host: "localhost"
+task_4-nginx-1        | 192.168.65.1 - - [26/Oct/2023:18:43:08 +0000] "GET /lite-server/ HTTP/1.1" 502 559 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+task_4-nginx-1        | 2023/10/26 18:43:09 [error] 21#21: *1 open() "/app/static/favicon.ico" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/lite-server/"
+task_4-nginx-1        | 192.168.65.1 - - [26/Oct/2023:18:43:09 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://localhost/lite-server/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+task_4-nginx-1        | 192.168.65.1 - - [26/Oct/2023:18:43:19 +0000] "GET /json-server/posts HTTP/1.1" 200 77 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+task_4-json-server-2  | GET /posts 200 7.405 ms - 77

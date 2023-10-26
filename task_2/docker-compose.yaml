@@ -1,0 +1,12 @@
+version: '3'
+services:
+  lite-server:
+    image: node
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./static:/app/static
+      - ./bs-config.json:/app/bs-config.json
+    working_dir: /app
+    command: sh -c "npm install -g lite-server && lite-server --config bs-config.json --no-open"
+    tty: true
